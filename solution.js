@@ -8,10 +8,10 @@ function palindrome(str){
 
         // check if first and last string are same
         if (str[i] !== str[len - 1 - i]) {
-            return 'false';
+            return false;
         }
     }
-    return 'true';
+    return true;
 
 }
 module.exports = palindrome
