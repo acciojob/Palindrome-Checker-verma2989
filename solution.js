@@ -1,17 +1,15 @@
 // complete the given function
 
 function palindrome(str){
-   const len = str.length;
-
-    // loop through half of the string
-    for (let i = 0; i < len / 2; i++) {
-
-        // check if first and last string are same
-        if (str[i] !== str[len - 1 - i]) {
-            return false;
-        }
+      let onlyLetters = str.replace(/[`~ !@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '');
+    onlyLetters = onlyLetters.toLowerCase().split("");
+    for (let i = 0; i < onlyLetters.length - 1 / 2; i++) {
+      if (onlyLetters[i] !== onlyLetters[onlyLetters.length - i - 1]) {
+      return false;
+      break;
     }
-    return true;
+  }
+  return true;
 
 }
 module.exports = palindrome
